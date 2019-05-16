@@ -4,7 +4,7 @@
 -- @Date   : 5/6/2019, 10:49:38 PM
 
 ---@class Observer: object
-Observer = class('Observer')
+local Observer = class('Observer')
 
 local Event = require('lib.observer.event')
 
@@ -47,3 +47,5 @@ end
 function Observer:fireEvent(id, ...)
     return _EVENTS[id]:dispatch(...)
 end
+
+return Observer
